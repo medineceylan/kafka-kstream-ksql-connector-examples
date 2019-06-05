@@ -1,6 +1,6 @@
 [
     {
-      "namespace": "com.medineceylan.kafkaexamples.models",
+      "namespace": "com.medineceylan.kafkapoc.models",
       "type": "record",
       "name": "Transaction",
       "fields": [
@@ -23,7 +23,7 @@
       ]
     },
     {
-      "namespace": "com.medineceylan.kafkaexamples.models",
+      "namespace": "com.medineceylan.kafkapoc.models",
       "type": "record",
       "name": "AccountBalance",
       "fields": [

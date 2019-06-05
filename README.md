@@ -1,5 +1,4 @@
-# kafkaexamples
-kafkaexamples a poc
+# kafka-poc
 
  - confluent stack
  - kafka broker
@@ -38,7 +37,7 @@ confluent unload SinkTopics
 
 ```
 
-### transactionproducer
+### transactionsproducer
 
 ```sh
 mvn clean package
@@ -51,7 +50,7 @@ java -jar target/transactionsproducer-1.0-SNAPSHOT-jar-with-dependencies.jar
 
 ```sh
 mvn clean package
-java -jar ./target/balanceaggregator-1.0-jar-with-dependencies.jar
+java -jar target/balanceaggregator-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
 
 
@@ -60,11 +59,11 @@ __*if you want to see consumer result from confluent console*__
 ./bin/kafka-avro-console-consumer --bootstrap-server localhost:9092 --topic account-balance --from-beginning
 
  
- ###fraudtransactions
+ ###frauddetector
  
  ```sh
  mvn clean package
- java -jar ./target/fraudtransactions-1.0-SNAPSHOT-jar-with-dependencies.jar
+ java -jar ./target/frauddetector-1.0-SNAPSHOT-jar-with-dependencies.jar
  ```
  
  
