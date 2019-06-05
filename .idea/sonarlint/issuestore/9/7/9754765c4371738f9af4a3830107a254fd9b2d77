@@ -1,10 +1,0 @@
-
-S
-squid:S106"9Replace this use of System.out or System.err by a logger.(ï¯	8¬ƒ›î±-
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(íí‘Ë8¬ƒ›î±-
-Isquid:S1125"(Remove the literal "true" boolean value.(åÂ¡¶ùÿÿÿÿ8¬ƒ›î±-
-Jsquid:S1125")Remove the literal "false" boolean value.(Ø€¥¸ÿÿÿÿÿ8¬ƒ›î±-
-Ksquid:S1172"*Remove this unused method parameter "key".(¿Üûÿÿÿÿ8¬ƒ›î±-
-Dsquid:S1604"(Make this anonymous inner class a lambda(¡•èğ8¬ƒ›î±-
-Dsquid:S1604"(Make this anonymous inner class a lambda(¡•èğ8¬ƒ›î±-
