@@ -54,16 +54,19 @@ java -jar target/balanceaggregator-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
 
 
-__*if you want to see consumer result from confluent console*__
+__*if you want to see consumer results from confluent console*__
 
 ./bin/kafka-avro-console-consumer --bootstrap-server localhost:9092 --topic account-balance --from-beginning
+./bin/kafka-avro-console-consumer --bootstrap-server localhost:9092 --topic transactions --from-beginning
+./bin/kafka-avro-console-consumer --bootstrap-server localhost:9092 --topic transactions-valid --from-beginning
+./bin/kafka-avro-console-consumer --bootstrap-server localhost:9092 --topic transactions-fraud --from-beginning
 
  
  ###frauddetector
  
  ```sh
  mvn clean package
- java -jar ./target/frauddetector-1.0-SNAPSHOT-jar-with-dependencies.jar
+ java -jar target/frauddetector-1.0-SNAPSHOT-jar-with-dependencies.jar
  ```
  
  

@@ -18,7 +18,7 @@ import java.util.Properties;
 public class FraudMain {
 
     private Logger log = LoggerFactory.getLogger(FraudMain.class.getSimpleName());
-    private AppConfig appConfig;
+    private ApplicationConfig appConfig;
 
     public static void main(String[] args) {
         FraudMain fraudMain = new FraudMain();
@@ -26,7 +26,7 @@ public class FraudMain {
     }
 
     private FraudMain() {
-        appConfig = new AppConfig(ConfigFactory.load());
+        appConfig =  new ApplicationConfig(ConfigFactory.load(ApplicationConfig.class.getClassLoader()));
     }
 
     private void start() {

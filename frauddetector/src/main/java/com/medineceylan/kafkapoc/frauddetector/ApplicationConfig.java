@@ -4,7 +4,7 @@ import com.typesafe.config.Config;
 import lombok.Getter;
 
 @Getter
-public class AppConfig {
+public class ApplicationConfig {
 
     private final String bootstrapServers;
     private final String schemaRegistryUrl;
@@ -13,7 +13,9 @@ public class AppConfig {
     private final String fraudTopicName;
     private final String applicationId;
 
-    public AppConfig(Config config) {
+    public ApplicationConfig(Config config) {
+
+
         this.bootstrapServers = config.getString("kafka.bootstrap.servers");
         this.schemaRegistryUrl = config.getString("kafka.schema.registry.url");
         this.sourceTopicName = config.getString("kafka.source.topic.name");

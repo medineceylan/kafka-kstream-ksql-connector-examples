@@ -111,16 +111,12 @@ public class KafkaConsumerClient {
                         .withValueSerde(accountBalanceSpecificAvroSerde)
         ).toStream().to(balanceTopicName, Produced.with(stringSerde, accountBalanceSpecificAvroSerde));
 
-
         return new KafkaStreams(builder.build(), props);
-
     }
 
 
     private AccountBalance emptyAccountBalance() {
-
         return AccountBalance.newBuilder().setCustomerId("N/A").setAmount(0.0).build();
-
     }
 
 
