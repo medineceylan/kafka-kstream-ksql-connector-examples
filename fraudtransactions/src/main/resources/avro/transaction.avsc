@@ -1,0 +1,25 @@
+[
+    {
+      "namespace": "com.medineceylan.kafkaexamples.models",
+      "type": "record",
+      "name": "Transaction",
+      "fields": [
+        {
+            "name": "transaction_type",
+            "type": {
+                "name": "TransactionType",
+                "type": "enum",
+                "symbols": [
+                  "OPENING",
+                  "WITHDRAW",
+                  "DEPOSIT"
+                ]
+            }
+        },
+        {"name": "customer_id",  "type": "string"},
+        {"name": "amount",  "type": "double", "default": 0},
+        {"name": "is_fraud",  "type": "boolean", "default": false},
+        {"name": "transaction_time",  "type": {"type": "long", "logicalType": "timestamp-millis"}, "doc": "transaction time"}
+      ]
+    }
+]
