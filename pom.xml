@@ -12,6 +12,7 @@
         <module>transactionsproducer</module>
         <module>balanceaggregator</module>
         <module>frauddetector</module>
+        <module>balance-aggregator-with-ksql</module>
     </modules>
 
 
