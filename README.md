@@ -96,13 +96,12 @@ __*if you want to see balance of each account on postgresql see account-balance 
  ```
  
  
- 
 __*if you want to see consumer results from confluent console*__
 
 ```sh
-kafka-avro-console-consumer --bootstrap-server localhost:9092 --topic account-balance --from-beginning 
-kafka-avro-console-consumer --bootstrap-server localhost:9092 --topic transactions --from-beginning
-kafka-avro-console-consumer --bootstrap-server localhost:9092 --topic valid-transactions --from-beginning;
-kafka-avro-console-consumer --bootstrap-server localhost:9092 --topic fraud-transactions --from-beginning 
+kafka-avro-console-consumer --bootstrap-server localhost:9092 --topic account-balance  --from-beginning 
+kafka-avro-console-consumer --bootstrap-server localhost:9092 --topic transactions       --from-beginning
+kafka-avro-console-consumer --bootstrap-server localhost:9092 --topic transactions-valid --from-beginning
+kafka-avro-console-consumer --bootstrap-server localhost:9092 --topic transactions-fraud --from-beginning 
 kafka-avro-console-consumer --bootstrap-server localhost:9092 --topic account-balance-ll --from-beginning 
 ```

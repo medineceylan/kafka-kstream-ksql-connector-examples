@@ -38,6 +38,7 @@ public class FraudMain {
     }
 
     private Properties getKafkaStreamsConfig() {
+
         Properties config = new Properties();
         config.put(StreamsConfig.APPLICATION_ID_CONFIG, appConfig.getApplicationId());
         config.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, appConfig.getBootstrapServers());
@@ -61,10 +62,9 @@ public class FraudMain {
 
         KStream<Bytes, Transaction>[] branches = transactions.branch(
                 (k, transaction) -> isValidTransaction(transaction),
-                (k, transaction) -> true
+                (k, transaction) -> !isValidTransaction(transaction)
 
         );
-
 
         KStream<Bytes, Transaction> validTranscations = branches[0];
         KStream<Bytes, Transaction> fraudTransactions = branches[1];
@@ -78,7 +78,7 @@ public class FraudMain {
 
     private boolean isValidTransaction(Transaction transaction) {
 
-        return transaction.getIsFraud().booleanValue() == true;
+        return transaction.getIsFraud().booleanValue();
     }
 
 }
