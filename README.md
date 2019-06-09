@@ -68,7 +68,7 @@ ksql-server-start /Users/medineceylan/Desktop/DEV/confluent-5.2.1/etc/ksql/ksql-
 ```
 __*if you want to see consumer results from confluent console*__
 
-_*register connectors*__
+_*register connectors
 
 ###kafkaconnector
 
@@ -86,7 +86,7 @@ confluent unload SinkTopics
 ```
 
 
-__*if you want to see balance of each account on postgresql see account-balance and account-balance-ll tables*__
+__*if you want to see balance of each account on postgresql see account-balance and account-balance-ll tables
  
  ###frauddetector
  
