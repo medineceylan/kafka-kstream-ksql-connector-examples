@@ -63,7 +63,7 @@ confluent stop
 ###balance-aggregator-with-ksql run this on confluent side
 
 ```sh
-ksql-server-start /Users/medineceylan/Desktop/DEV/confluent-5.2.1/etc/ksql/ksql-server.properties --queries-file /Users/medineceylan/Desktop/DEV/kafka-poc/balance-aggregator-with-ksql/balances.sql
+ksql-server-start /Users/medineceylan/Desktop/DEV/confluent-5.2.1/etc/ksql/ksql-server.properties --queries-file /Users/medineceylan/Desktop/DEV/poc/kafka-poc/balance-aggregator-with-ksql/balances.sql
 
 ```
 __*if you want to see consumer results from confluent console*__

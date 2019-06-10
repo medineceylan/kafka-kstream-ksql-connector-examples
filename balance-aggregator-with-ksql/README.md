@@ -1,12 +1,9 @@
-###balance aggregator with ksql:
+#balance aggregator with ksql:
 
 --With this module we will calculate each customers balance.
  And put it to account-balance-ll on postgresql via kafkaconnector
  Customers transactions should be generated already with transactions producer.
  
-###preprequisites:
- 
- 1.Confluent should be run:
  
 ###check whether transactions topic is ready or not:
  
