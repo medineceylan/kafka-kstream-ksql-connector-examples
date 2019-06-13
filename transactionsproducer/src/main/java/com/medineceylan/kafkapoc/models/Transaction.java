@@ -13,7 +13,7 @@ import org.apache.avro.message.SchemaStore;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class Transaction extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 8458792332268964124L;
+  private static final long serialVersionUID = -7450657912048456443L;
   public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Transaction\",\"namespace\":\"com.medineceylan.kafkapoc.models\",\"fields\":[{\"name\":\"transaction_type\",\"type\":{\"type\":\"enum\",\"name\":\"TransactionType\",\"symbols\":[\"OPENING\",\"WITHDRAW\",\"DEPOSIT\"]}},{\"name\":\"customer_id\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"amount\",\"type\":\"double\",\"default\":0},{\"name\":\"is_fraud\",\"type\":\"boolean\",\"default\":false},{\"name\":\"transaction_time\",\"type\":{\"type\":\"long\",\"logicalType\":\"timestamp-millis\"},\"doc\":\"transaction time\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
@@ -51,7 +51,7 @@ public class Transaction extends org.apache.avro.specific.SpecificRecordBase imp
     return DECODER.decode(b);
   }
 
-   private TransactionType transaction_type;
+   private com.medineceylan.kafkapoc.models.TransactionType transaction_type;
    private java.lang.String customer_id;
    private double amount;
    private boolean is_fraud;
@@ -73,7 +73,7 @@ public class Transaction extends org.apache.avro.specific.SpecificRecordBase imp
    * @param is_fraud The new value for is_fraud
    * @param transaction_time transaction time
    */
-  public Transaction(TransactionType transaction_type, java.lang.String customer_id, java.lang.Double amount, java.lang.Boolean is_fraud, org.joda.time.DateTime transaction_time) {
+  public Transaction(com.medineceylan.kafkapoc.models.TransactionType transaction_type, java.lang.String customer_id, java.lang.Double amount, java.lang.Boolean is_fraud, org.joda.time.DateTime transaction_time) {
     this.transaction_type = transaction_type;
     this.customer_id = customer_id;
     this.amount = amount;
@@ -118,7 +118,7 @@ public class Transaction extends org.apache.avro.specific.SpecificRecordBase imp
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: transaction_type = (TransactionType)value$; break;
+    case 0: transaction_type = (com.medineceylan.kafkapoc.models.TransactionType)value$; break;
     case 1: customer_id = (java.lang.String)value$; break;
     case 2: amount = (java.lang.Double)value$; break;
     case 3: is_fraud = (java.lang.Boolean)value$; break;
@@ -131,7 +131,7 @@ public class Transaction extends org.apache.avro.specific.SpecificRecordBase imp
    * Gets the value of the 'transaction_type' field.
    * @return The value of the 'transaction_type' field.
    */
-  public TransactionType getTransactionType() {
+  public com.medineceylan.kafkapoc.models.TransactionType getTransactionType() {
     return transaction_type;
   }
 
@@ -176,8 +176,8 @@ public class Transaction extends org.apache.avro.specific.SpecificRecordBase imp
    * Creates a new Transaction RecordBuilder.
    * @return A new Transaction RecordBuilder
    */
-  public static Transaction.Builder newBuilder() {
-    return new Transaction.Builder();
+  public static com.medineceylan.kafkapoc.models.Transaction.Builder newBuilder() {
+    return new com.medineceylan.kafkapoc.models.Transaction.Builder();
   }
 
   /**
@@ -185,8 +185,8 @@ public class Transaction extends org.apache.avro.specific.SpecificRecordBase imp
    * @param other The existing builder to copy.
    * @return A new Transaction RecordBuilder
    */
-  public static Transaction.Builder newBuilder(Transaction.Builder other) {
-    return new Transaction.Builder(other);
+  public static com.medineceylan.kafkapoc.models.Transaction.Builder newBuilder(com.medineceylan.kafkapoc.models.Transaction.Builder other) {
+    return new com.medineceylan.kafkapoc.models.Transaction.Builder(other);
   }
 
   /**
@@ -194,8 +194,8 @@ public class Transaction extends org.apache.avro.specific.SpecificRecordBase imp
    * @param other The existing instance to copy.
    * @return A new Transaction RecordBuilder
    */
-  public static Transaction.Builder newBuilder(Transaction other) {
-    return new Transaction.Builder(other);
+  public static com.medineceylan.kafkapoc.models.Transaction.Builder newBuilder(com.medineceylan.kafkapoc.models.Transaction other) {
+    return new com.medineceylan.kafkapoc.models.Transaction.Builder(other);
   }
 
   /**
@@ -204,7 +204,7 @@ public class Transaction extends org.apache.avro.specific.SpecificRecordBase imp
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Transaction>
     implements org.apache.avro.data.RecordBuilder<Transaction> {
 
-    private TransactionType transaction_type;
+    private com.medineceylan.kafkapoc.models.TransactionType transaction_type;
     private java.lang.String customer_id;
     private double amount;
     private boolean is_fraud;
@@ -220,7 +220,7 @@ public class Transaction extends org.apache.avro.specific.SpecificRecordBase imp
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(Transaction.Builder other) {
+    private Builder(com.medineceylan.kafkapoc.models.Transaction.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.transaction_type)) {
         this.transaction_type = data().deepCopy(fields()[0].schema(), other.transaction_type);
@@ -248,7 +248,7 @@ public class Transaction extends org.apache.avro.specific.SpecificRecordBase imp
      * Creates a Builder by copying an existing Transaction instance
      * @param other The existing instance to copy.
      */
-    private Builder(Transaction other) {
+    private Builder(com.medineceylan.kafkapoc.models.Transaction other) {
             super(SCHEMA$);
       if (isValidValue(fields()[0], other.transaction_type)) {
         this.transaction_type = data().deepCopy(fields()[0].schema(), other.transaction_type);
@@ -276,7 +276,7 @@ public class Transaction extends org.apache.avro.specific.SpecificRecordBase imp
       * Gets the value of the 'transaction_type' field.
       * @return The value.
       */
-    public TransactionType getTransactionType() {
+    public com.medineceylan.kafkapoc.models.TransactionType getTransactionType() {
       return transaction_type;
     }
 
@@ -285,7 +285,7 @@ public class Transaction extends org.apache.avro.specific.SpecificRecordBase imp
       * @param value The value of 'transaction_type'.
       * @return This builder.
       */
-    public Transaction.Builder setTransactionType(TransactionType value) {
+    public com.medineceylan.kafkapoc.models.Transaction.Builder setTransactionType(com.medineceylan.kafkapoc.models.TransactionType value) {
       validate(fields()[0], value);
       this.transaction_type = value;
       fieldSetFlags()[0] = true;
@@ -305,7 +305,7 @@ public class Transaction extends org.apache.avro.specific.SpecificRecordBase imp
       * Clears the value of the 'transaction_type' field.
       * @return This builder.
       */
-    public Transaction.Builder clearTransactionType() {
+    public com.medineceylan.kafkapoc.models.Transaction.Builder clearTransactionType() {
       transaction_type = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -324,7 +324,7 @@ public class Transaction extends org.apache.avro.specific.SpecificRecordBase imp
       * @param value The value of 'customer_id'.
       * @return This builder.
       */
-    public Transaction.Builder setCustomerId(java.lang.String value) {
+    public com.medineceylan.kafkapoc.models.Transaction.Builder setCustomerId(java.lang.String value) {
       validate(fields()[1], value);
       this.customer_id = value;
       fieldSetFlags()[1] = true;
@@ -344,7 +344,7 @@ public class Transaction extends org.apache.avro.specific.SpecificRecordBase imp
       * Clears the value of the 'customer_id' field.
       * @return This builder.
       */
-    public Transaction.Builder clearCustomerId() {
+    public com.medineceylan.kafkapoc.models.Transaction.Builder clearCustomerId() {
       customer_id = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -363,7 +363,7 @@ public class Transaction extends org.apache.avro.specific.SpecificRecordBase imp
       * @param value The value of 'amount'.
       * @return This builder.
       */
-    public Transaction.Builder setAmount(double value) {
+    public com.medineceylan.kafkapoc.models.Transaction.Builder setAmount(double value) {
       validate(fields()[2], value);
       this.amount = value;
       fieldSetFlags()[2] = true;
@@ -383,7 +383,7 @@ public class Transaction extends org.apache.avro.specific.SpecificRecordBase imp
       * Clears the value of the 'amount' field.
       * @return This builder.
       */
-    public Transaction.Builder clearAmount() {
+    public com.medineceylan.kafkapoc.models.Transaction.Builder clearAmount() {
       fieldSetFlags()[2] = false;
       return this;
     }
@@ -401,7 +401,7 @@ public class Transaction extends org.apache.avro.specific.SpecificRecordBase imp
       * @param value The value of 'is_fraud'.
       * @return This builder.
       */
-    public Transaction.Builder setIsFraud(boolean value) {
+    public com.medineceylan.kafkapoc.models.Transaction.Builder setIsFraud(boolean value) {
       validate(fields()[3], value);
       this.is_fraud = value;
       fieldSetFlags()[3] = true;
@@ -421,7 +421,7 @@ public class Transaction extends org.apache.avro.specific.SpecificRecordBase imp
       * Clears the value of the 'is_fraud' field.
       * @return This builder.
       */
-    public Transaction.Builder clearIsFraud() {
+    public com.medineceylan.kafkapoc.models.Transaction.Builder clearIsFraud() {
       fieldSetFlags()[3] = false;
       return this;
     }
@@ -441,7 +441,7 @@ public class Transaction extends org.apache.avro.specific.SpecificRecordBase imp
       * @param value The value of 'transaction_time'.
       * @return This builder.
       */
-    public Transaction.Builder setTransactionTime(org.joda.time.DateTime value) {
+    public com.medineceylan.kafkapoc.models.Transaction.Builder setTransactionTime(org.joda.time.DateTime value) {
       validate(fields()[4], value);
       this.transaction_time = value;
       fieldSetFlags()[4] = true;
@@ -463,7 +463,7 @@ public class Transaction extends org.apache.avro.specific.SpecificRecordBase imp
       * transaction time
       * @return This builder.
       */
-    public Transaction.Builder clearTransactionTime() {
+    public com.medineceylan.kafkapoc.models.Transaction.Builder clearTransactionTime() {
       fieldSetFlags()[4] = false;
       return this;
     }
@@ -473,7 +473,7 @@ public class Transaction extends org.apache.avro.specific.SpecificRecordBase imp
     public Transaction build() {
       try {
         Transaction record = new Transaction();
-        record.transaction_type = fieldSetFlags()[0] ? this.transaction_type : (TransactionType) defaultValue(fields()[0], record.getConversion(0));
+        record.transaction_type = fieldSetFlags()[0] ? this.transaction_type : (com.medineceylan.kafkapoc.models.TransactionType) defaultValue(fields()[0], record.getConversion(0));
         record.customer_id = fieldSetFlags()[1] ? this.customer_id : (java.lang.String) defaultValue(fields()[1], record.getConversion(1));
         record.amount = fieldSetFlags()[2] ? this.amount : (java.lang.Double) defaultValue(fields()[2], record.getConversion(2));
         record.is_fraud = fieldSetFlags()[3] ? this.is_fraud : (java.lang.Boolean) defaultValue(fields()[3], record.getConversion(3));

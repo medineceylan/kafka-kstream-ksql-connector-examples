@@ -15,6 +15,7 @@ public class TransactionConsumer {
     public void start(){
         KafkaStreams kafkaStreams;
         kafkaStreams = kafkaConsumerClient.createTopology();
+
         kafkaStreams.cleanUp();
         kafkaStreams.start();
         Runtime.getRuntime().addShutdownHook(new Thread(kafkaStreams::close));

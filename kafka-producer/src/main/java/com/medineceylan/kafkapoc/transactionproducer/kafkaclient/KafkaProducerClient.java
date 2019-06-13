@@ -1,6 +1,6 @@
 package com.medineceylan.kafkapoc.transactionproducer.kafkaclient;
 
-
+import com.medineceylan.kafkapoc.models.Transaction;
 import com.medineceylan.kafkapoc.transactionproducer.config.ApplicationConfig;
 import io.confluent.kafka.serializers.KafkaAvroSerializer;
 import io.confluent.kafka.serializers.KafkaAvroSerializerConfig;

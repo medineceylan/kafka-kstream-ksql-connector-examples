@@ -12,7 +12,7 @@
         <module>transactionsproducer</module>
         <module>balanceaggregator</module>
         <module>frauddetector</module>
-        <module>balance-aggregator-with-ksql</module>
+        <module>kafka-throughput-consumer</module>
     </modules>
 
 
