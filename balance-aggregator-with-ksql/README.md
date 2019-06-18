@@ -1,11 +1,11 @@
-#balance aggregator with ksql:
+# balance aggregator with ksql:
 
 --With this module we will calculate each customers balance.
  And put it to account-balance-ll on postgresql via kafkaconnector
  Customers transactions should be generated already with transactions producer.
  
  
-###check whether transactions topic is ready or not:
+### check whether transactions topic is ready or not:
  
  ```sh
 kafka-avro-console-consumer --bootstrap-server localhost:9092 --topic transactions --from-beginning
@@ -15,7 +15,7 @@ kafka-topics --zookeeper 127.0.0.1:2181 --topic transactions --describe
  
  
  
-###start with KSQL to stream transactions:
+### start with KSQL to stream transactions:
  
 __*first configure ksql-server.properties*__
  
@@ -36,12 +36,12 @@ __*add these to ksql-server.properties*__
 __*stop ksql on confluent side and start*__
   
   
-###connect ksql cli
+### connect ksql cli
   
   ksql http://localhost:8088
   
   
-###create a stream from transactions topic with avro value format  with time extractor
+### create a stream from transactions topic with avro value format  with time extractor
 
    ```sh
 CREATE STREAM transactions_stream_ksql WITH 
@@ -49,13 +49,13 @@ CREATE STREAM transactions_stream_ksql WITH
 
  ```
 
-###you can look at your new stream
+### you can look at your new stream
 
 ```sh
 Select * from transactions_stream_ksql;
  ```
  
-###rekeyed with customerID;
+### rekeyed with customerID;
 
  ```sh
 CREATE STREAM rekeyed_transactions_stream 
@@ -68,7 +68,7 @@ Select * from rekeyed_transactions_stream;
 
  ```
  
-###filter and get only non fraud values and update :
+### filter and get only non fraud values and update :
 
  ```sh
 
@@ -82,6 +82,7 @@ from rekeyed_transactions_stream where is_fraud=false and transaction_type!='WIT
 CREATE table account_blnc_ksql WITH (kafka_topic='account-balance-k', value_format='AVRO',PARTITIONS=5,key=customer_id)   as Select withdraws.customer_id as customer_id, 
 (non_withdraws.amount-withdraws.amount) as balance 
 from non_withdraws inner join withdraws  ON ( non_withdraws.customer_id=withdraws.customer_id);
+
 
 
 Select * from account_blnc_ksql;

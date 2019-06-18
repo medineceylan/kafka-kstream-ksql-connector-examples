@@ -12,7 +12,6 @@
         <module>transactionsproducer</module>
         <module>balanceaggregator</module>
         <module>frauddetector</module>
-        <module>kafka-throughput-consumer</module>
     </modules>
 
 

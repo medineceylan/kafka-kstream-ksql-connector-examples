@@ -52,7 +52,7 @@ java -jar target/balanceaggregator-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
 
  
-###stop confluent
+### stop confluent
  
 ```sh
 confluent stop
@@ -60,7 +60,7 @@ confluent stop
 ```
 
 
-###balance-aggregator-with-ksql run this on confluent side
+### balance-aggregator-with-ksql run this on confluent side
 
 ```sh
 ksql-server-start /Users/medineceylan/Desktop/DEV/confluent-5.2.1/etc/ksql/ksql-server.properties --queries-file /Users/medineceylan/Desktop/DEV/poc/kafka-poc/balance-aggregator-with-ksql/balances.sql
@@ -70,7 +70,7 @@ __*if you want to see consumer results from confluent console*__
 
 _*register connectors
 
-###kafkaconnector
+### kafkaconnector
 
 ```sh
 
@@ -88,7 +88,7 @@ confluent unload SinkTopics
 
 __*if you want to see balance of each account on postgresql see account-balance and account-balance-ll tables
  
- ###frauddetector
+ ### frauddetector
  
  ```sh
  mvn clean package
