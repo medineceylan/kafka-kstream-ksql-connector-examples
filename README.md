@@ -1,4 +1,4 @@
-# kafka-poc
+# kafka-kstream-ksql-connector examples
 
  - confluent stack
  - kafka broker
