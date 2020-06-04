@@ -1,10 +1,10 @@
 # kafka-kstream-ksql-connector examples
 
- - confluent stack
- - kafka broker
- - kafka connnector for sink
- - kafka streams
- - ksql
+   confluent stack
+   kafka connnector for sink
+   kafka streams
+   ksql
+   kafka broker
 
 ```sh
 confluent start
@@ -44,7 +44,7 @@ java -jar target/transactionsproducer-1.0-SNAPSHOT-jar-with-dependencies.jar
 
 ```
 
-### balanceaggregator `with kafka-streams` 
+### balanceaggregator  
 
 ```sh
 mvn clean package
